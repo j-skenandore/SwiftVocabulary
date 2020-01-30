@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Words Table Table View Controller-->
+        <!--Words Table View Controller-->
         <scene sceneID="OTj-ru-8sO">
             <objects>
-                <tableViewController id="faS-hO-VNV" customClass="WordsTableTableViewController" customModule="Swift_Vocabulary" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="faS-hO-VNV" customClass="WordsTableViewController" customModule="Swift_Vocabulary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GeR-KD-uF3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,6 +32,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="985-fF-LQL" kind="show" identifier="ShowDefinitionSegue" id="ny3-d1-W6k"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -52,13 +55,42 @@
                     <view key="view" contentMode="scaleToFill" id="j9G-8Y-5Ph">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP8-i8-NSn">
+                                <rect key="frame" x="20" y="108" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gTi-y4-duF">
+                                <rect key="frame" x="20" y="149" width="374" height="693"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gTi-y4-duF" firstAttribute="leading" secondItem="dP8-i8-NSn" secondAttribute="leading" id="1oG-NO-jgG"/>
+                            <constraint firstItem="apm-QN-FLg" firstAttribute="trailing" secondItem="gTi-y4-duF" secondAttribute="trailing" constant="20" id="5fv-fb-6fT"/>
+                            <constraint firstItem="dP8-i8-NSn" firstAttribute="leading" secondItem="apm-QN-FLg" secondAttribute="leading" constant="20" id="9cF-me-O4v"/>
+                            <constraint firstItem="apm-QN-FLg" firstAttribute="bottom" secondItem="gTi-y4-duF" secondAttribute="bottom" constant="20" id="CKb-uj-Qvt"/>
+                            <constraint firstItem="dP8-i8-NSn" firstAttribute="top" secondItem="apm-QN-FLg" secondAttribute="top" constant="20" id="EIA-Eo-5ae"/>
+                            <constraint firstItem="gTi-y4-duF" firstAttribute="top" secondItem="dP8-i8-NSn" secondAttribute="bottom" constant="20" id="JLR-IX-TBH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="apm-QN-FLg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="As4-eK-QEj"/>
+                    <connections>
+                        <outlet property="definitionTextField" destination="gTi-y4-duF" id="UnD-OK-QW8"/>
+                        <outlet property="vocabularyWordLabel" destination="dP8-i8-NSn" id="IX0-TM-PNg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCd-ld-I4A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1733" y="118"/>
+            <point key="canvasLocation" x="1730" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="16P-FC-Ua6">

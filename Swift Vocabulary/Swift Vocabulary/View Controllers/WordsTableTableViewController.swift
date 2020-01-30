@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WordsTableTableViewController: UITableViewController {
+class WordsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

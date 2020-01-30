@@ -10,6 +10,10 @@ import UIKit
 
 class DefinitionViewController: UIViewController {
 
+    @IBOutlet weak var vocabularyWordLabel: UILabel!
+    
+    @IBOutlet weak var definitionTextField: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

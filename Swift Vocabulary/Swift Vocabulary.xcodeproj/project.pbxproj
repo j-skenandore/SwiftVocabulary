@@ -14,6 +14,7 @@
 		9C20F8C623E282FB009CA2EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C20F8C423E282FB009CA2EE /* LaunchScreen.storyboard */; };
 		9C20F8CF23E28386009CA2EE /* WordsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C20F8CE23E28386009CA2EE /* WordsTableTableViewController.swift */; };
 		9C20F8D123E283BD009CA2EE /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C20F8D023E283BD009CA2EE /* DefinitionViewController.swift */; };
+		9CE9794D23E2918F00E4E05F /* VocabularyWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9794C23E2918F00E4E05F /* VocabularyWord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9C20F8C723E282FB009CA2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C20F8CE23E28386009CA2EE /* WordsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsTableTableViewController.swift; sourceTree = "<group>"; };
 		9C20F8D023E283BD009CA2EE /* DefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
+		9CE9794C23E2918F00E4E05F /* VocabularyWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyWord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				9C20F8B823E282F5009CA2EE /* Swift Vocabulary */,
+				9C20F8CD23E28320009CA2EE /* Resources */,
 				9C20F8B723E282F5009CA2EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,8 +61,8 @@
 		9C20F8B823E282F5009CA2EE /* Swift Vocabulary */ = {
 			isa = PBXGroup;
 			children = (
+				9CE9794E23E2919A00E4E05F /* Model */,
 				9C20F8D223E283D8009CA2EE /* View Controllers */,
-				9C20F8CD23E28320009CA2EE /* Resources */,
 				9C20F8BF23E282F5009CA2EE /* Main.storyboard */,
 				9C20F8C723E282FB009CA2EE /* Info.plist */,
 			);
@@ -84,6 +87,14 @@
 				9C20F8D023E283BD009CA2EE /* DefinitionViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9CE9794E23E2919A00E4E05F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CE9794C23E2918F00E4E05F /* VocabularyWord.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 			files = (
 				9C20F8BA23E282F5009CA2EE /* AppDelegate.swift in Sources */,
 				9C20F8D123E283BD009CA2EE /* DefinitionViewController.swift in Sources */,
+				9CE9794D23E2918F00E4E05F /* VocabularyWord.swift in Sources */,
 				9C20F8BC23E282F5009CA2EE /* SceneDelegate.swift in Sources */,
 				9C20F8CF23E28386009CA2EE /* WordsTableTableViewController.swift in Sources */,
 			);
